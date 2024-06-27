@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.PsiFeatures.VisualStudio.SinceVs14</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.SinceVs14.Daemon.ResharperDaemonVsBulbRemover">
+            <summary>
+            Hide VS14+ light bulb margin.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.PatternID.Matches(JetBrains.PsiFeatures.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.ActionID)">
+            <summary>
+              It is the main part of the pattern matching algorithm. It uses the following idea:
+                * We allow null fields in <see cref="T:JetBrains.PsiFeatures.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.PatternID"/>.
+                  If some field in the pattern is null then we will not use it for comparison.
+                * We don't allow null fields in <see cref="T:JetBrains.PsiFeatures.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.ActionID"/>.
+                  We don't want to distinguish such cases as:
+                    1) Some field is missing in the action class
+                    2) Some field is really null
+                    3) Some field contains type's default value
+                  So in all these cases the field in <see cref="T:JetBrains.PsiFeatures.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.ActionID"/> will be equal to the default value of its type.
+              The method also only check if the field in <see cref="T:JetBrains.PsiFeatures.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.ActionID"/> starts with / contains the corresponding field in <see cref="T:JetBrains.PsiFeatures.VisualStudio.SinceVs14.LightBulbs.VsLightBulbSuppressService14.PatternID"/>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.SinceVs14.TextControl.Intellisense.VsQuickInfoComponentSinceVs14.PreviewAugmentQuickInfoSession(System.Collections.Generic.IList{System.Object},JetBrains.PsiFeatures.VisualStudio.SinceVs10.TextControl.Intellisense.QuickInfoData)">
+            <summary>
+            If we're going to replace VS rich quick info, we have to add any content to the session before QuickInfoCommandHandlerAndSourceProvider.QuickInfoSource is called.
+            </summary>
+        </member>
+    </members>
+</doc>

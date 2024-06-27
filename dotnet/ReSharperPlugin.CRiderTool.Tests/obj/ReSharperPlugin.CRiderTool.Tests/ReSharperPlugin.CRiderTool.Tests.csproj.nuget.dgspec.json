@@ -1,0 +1,133 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\SDS\\hoolai\\CSharp\\MyRider\\CRiderTool\\src\\dotnet\\ReSharperPlugin.CRiderTool.Tests\\ReSharperPlugin.CRiderTool.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\SDS\\hoolai\\CSharp\\MyRider\\CRiderTool\\src\\dotnet\\ReSharperPlugin.CRiderTool.Tests\\ReSharperPlugin.CRiderTool.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\SDS\\hoolai\\CSharp\\MyRider\\CRiderTool\\src\\dotnet\\ReSharperPlugin.CRiderTool.Tests\\ReSharperPlugin.CRiderTool.Tests.csproj",
+        "projectName": "ReSharperPlugin.CRiderTool.Tests",
+        "projectPath": "C:\\SDS\\hoolai\\CSharp\\MyRider\\CRiderTool\\src\\dotnet\\ReSharperPlugin.CRiderTool.Tests\\ReSharperPlugin.CRiderTool.Tests.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\SDS\\hoolai\\CSharp\\MyRider\\CRiderTool\\src\\dotnet\\ReSharperPlugin.CRiderTool.Tests\\obj\\ReSharperPlugin.CRiderTool.Tests\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {
+              "C:\\SDS\\hoolai\\CSharp\\MyRider\\CRiderTool\\src\\dotnet\\ReSharperPlugin.CRiderTool\\ReSharperPlugin.CRiderTool.csproj": {
+                "projectPath": "C:\\SDS\\hoolai\\CSharp\\MyRider\\CRiderTool\\src\\dotnet\\ReSharperPlugin.CRiderTool\\ReSharperPlugin.CRiderTool.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "GitHubActionsTestLogger": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "JetBrains.ReSharper.SDK.Tests": {
+              "target": "Package",
+              "version": "[2024.1.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.4.1, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\SDS\\hoolai\\CSharp\\MyRider\\CRiderTool\\src\\dotnet\\ReSharperPlugin.CRiderTool\\ReSharperPlugin.CRiderTool.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\SDS\\hoolai\\CSharp\\MyRider\\CRiderTool\\src\\dotnet\\ReSharperPlugin.CRiderTool\\ReSharperPlugin.CRiderTool.csproj",
+        "projectName": "ReSharperPlugin.CRiderTool",
+        "projectPath": "C:\\SDS\\hoolai\\CSharp\\MyRider\\CRiderTool\\src\\dotnet\\ReSharperPlugin.CRiderTool\\ReSharperPlugin.CRiderTool.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\SDS\\hoolai\\CSharp\\MyRider\\CRiderTool\\src\\dotnet\\ReSharperPlugin.CRiderTool\\obj\\ReSharperPlugin.CRiderTool\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "JetBrains.ReSharper.SDK": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2024.1.0, )"
+            },
+            "JetBrains.Rider.RdBackend.Common": {
+              "target": "Package",
+              "version": "[241.0.20240408.84256, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Wave": {
+              "target": "Package",
+              "version": "[241.0.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

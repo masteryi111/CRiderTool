@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.PsiFeatures.VisualStudio.Protocol</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Backend.PeekSessions.IPeekSessionsFrontToBackInterop.AugmentPeekSession(JetBrains.PsiFeatures.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId,System.String,JetBrains.DocumentModel.RunningDocumentId,System.Nullable{System.Int32})">
+            <summary>
+            Augment peek session for declared elements, searches etc
+            </summary>
+            <param name="sessionId">Id of the session</param>
+            <param name="predefinedPeekDefinitionRelationshipName">Name of the predefined peek definition relationship name. VS-dependent</param>
+            <param name="documentId">Id of the document in text control</param>
+            <param name="documentOffset">Offset within the document</param>
+            <returns>List of infos to peek</returns>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Backend.PeekSessions.IPeekSessionsFrontToBackInterop.FindResults(JetBrains.PsiFeatures.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId,JetBrains.PsiFeatures.VisualStudio.Protocol.Common.PeekSessions.PeekableItemId,System.Threading.CancellationToken)">
+            <summary>
+            Implements Microsoft.VisualStudio.Language.Intellisense.IPeekResultSource.FindResults for the items returned by <see cref="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Backend.PeekSessions.IPeekSessionsFrontToBackInterop.AugmentPeekSession(JetBrains.PsiFeatures.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId,System.String,JetBrains.DocumentModel.RunningDocumentId,System.Nullable{System.Int32})"/>
+            </summary>
+            <returns>List of navigation results</returns>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Backend.PeekSessions.IPeekSessionsFrontToBackInterop.TryGetTodoUri(JetBrains.PsiFeatures.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId,JetBrains.DocumentModel.RunningDocumentId,System.Nullable{System.Int32})">
+            <summary>
+            Fetches the URI of the to-do item
+            </summary>
+            <param name="sessionId">Id of the session</param>
+            <param name="documentId">Id of the document in text control</param>
+            <param name="documentOffset">Offset within the document</param>
+            <returns>Uri if found</returns>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId">
+            <summary>
+            Peek session identifier
+            </summary>
+        </member>
+        <member name="P:JetBrains.PsiFeatures.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:JetBrains.PsiFeatures.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId.RelationshipName">
+            <summary>
+            Name of the relationship
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.Protocol.Common.PeekSessions.PeekableItemInfo">
+            <summary>
+            Information to provide to Microsoft.VisualStudio.Language.Intellisense.IPeekableItem
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.Debugger.IVsDebuggerInterop">
+            <summary>
+            Protocol component to interact with Visual Studio's debugger interface.
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.Debugger.IVsDebuggerInterop.QueryExpressionsType(System.String,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Queries actual type of provided expression.
+            </summary>
+            <param name="expression">the expression or the name of the local variable</param>
+            <param name="allowExpressionEvaluation">whether to allow debugger to evaluate provided expression.</param>
+            <param name="allowSideEffects">Whether to allow side effects evaluation.</param>
+            <param name="documentLocation">The document location in context of which the calculations should be performed.
+              If currently selected frame does not correspond to provided document's location the result will be always
+              null. You can disable this check by providing null to this parameter></param>
+            <returns>FQN of the provided type with type arguments in &lt; and &gt;</returns>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.Debugger.IVsDebuggerInterop.GetAllowImplicitEvaluation">
+            <summary>
+            Whether implicit property and function evaluation is enabled on frontend.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.FormatProperties.IVsAutoformatSettingsBackToFrontInterop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.IDE.Xaml.IDisableXamlAutoUpdateTagBackToFrontInterop.TryDisableXamlAutoUpdateTag">
+            <summary>
+            Disables XAML Auto-update tag
+            </summary>
+            <returns>True if it was enabled and needs to be restored</returns>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.IDE.Xaml.IDisableXamlAutoUpdateTagBackToFrontInterop.TryEnableXamlAutoUpdateTag">
+            <summary>
+            Enables XAML Auto-update tag
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.IVsLanguagesBackToFrontInterop.TryGetLangPreferencesAsync(System.Guid[])">
+            <summary>
+            Returns array of language preferences. The array will only contain languages for which the request was successful.
+            </summary>
+        </member>
+        <member name="T:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.LightBulbs.RoslynActionPriority">
+            <summary>
+            Keep in sync with Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSetPriority
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.PeekSessions.IPeekSessionsBackToFrontInterop.IsAvailable">
+            <summary>
+            Whether peeking is available on frontend
+            </summary>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.PeekSessions.IPeekSessionsBackToFrontInterop.IsPeekSessionActive(JetBrains.TextControl.ITextControl)">
+            <summary>
+            Whether there is an active peek session
+            </summary>
+            <param name="textControl">Text control in which the peek session is being searched</param>
+            <returns>True if there's an active peek session</returns>
+        </member>
+        <member name="M:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.PeekSessions.IPeekSessionsBackToFrontInterop.TriggerPeekSessionAsync(JetBrains.TextControl.ITextControl,JetBrains.PsiFeatures.VisualStudio.Protocol.Common.PeekSessions.PeekSessionId)">
+            <summary>
+            Requests peek session creation. 
+            </summary>
+            <param name="textControl">Text control for which the session is to be started. TODO: replace with text control id when available</param>
+            <param name="sessionId">Peek session id</param>
+            <returns>Whether the session was started</returns>
+        </member>
+        <member name="P:JetBrains.PsiFeatures.VisualStudio.Protocol.Frontend.PeekSessions.IPeekSessionsBackToFrontInterop.PeekSessionTerminated">
+            <summary>
+            Fired when peek session is closed
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = ReSharperPlugin.CRiderTool
+build_property.ProjectDir = C:\SDS\hoolai\CSharp\MyRider\CRiderTool\src\dotnet\ReSharperPlugin.CRiderTool\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

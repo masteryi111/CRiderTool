@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ReSharperPlugin.CRiderTool</id>
+    <version>9999.0.0</version>
+    <title>CRiderTool</title>
+    <authors>Author</authors>
+    <description>Description</description>
+    <releaseNotes>• Initial version</releaseNotes>
+    <copyright>Copyright 2024 Maintainers of CRiderTool</copyright>
+    <tags>resharper plugin</tags>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2">
+        <dependency id="JetBrains.Rider.RdBackend.Common" version="241.0.20240408.84256" exclude="Build,Analyzers" />
+        <dependency id="Wave" version="241.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Runtime.InteropServices.RuntimeInformation" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Xaml" targetFramework=".NETFramework4.7.2" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="C:\SDS\hoolai\CSharp\MyRider\CRiderTool\dependencies.json" target="dependencies.json" />
+    <file src="C:\SDS\hoolai\CSharp\MyRider\CRiderTool\src\dotnet\ReSharperPlugin.CRiderTool\bin\ReSharperPlugin.CRiderTool\Debug\ReSharperPlugin.CRiderTool.dll" target="dotFiles\ReSharperPlugin.CRiderTool.dll" />
+    <file src="C:\SDS\hoolai\CSharp\MyRider\CRiderTool\src\dotnet\ReSharperPlugin.CRiderTool\bin\ReSharperPlugin.CRiderTool\Debug\ReSharperPlugin.CRiderTool.pdb" target="dotFiles\ReSharperPlugin.CRiderTool.pdb" />
+  </files>
+</package>

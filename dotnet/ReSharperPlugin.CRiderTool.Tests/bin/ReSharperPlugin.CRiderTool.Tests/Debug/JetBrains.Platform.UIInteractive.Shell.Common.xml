@@ -1,0 +1,568 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.UIInteractive.Shell.Common</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.UI.SrcView.Application.Env.SplashScreenHwnd">
+            <summary>
+            Wraps the Splash Screen HWND which was created by the bootstrapper for passing it into the application host so that the splash could be closed after the appication is ready to show the main window.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.SrcView.Application.Env.WindowsHideSplashScreen">
+            <summary>
+            After the main window is ready, hides the splash screen.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.SrcView.Automation.IAutomationViewsRegistryEx.TryCreateWindowlessControlView(JetBrains.Application.UI.Automation.IAutomationViewsRegistry,JetBrains.Lifetimes.Lifetime,JetBrains.Application.UI.UIAutomation.IAutomation,JetBrains.Application.Components.IComponentContainer)">
+            <summary>
+            Normally, an automation object gets an Avalon view with a <see cref="!:ContentPresenter"/> automatically.
+            This allows to create an alternative <see cref="T:JetBrains.Application.UI.Controls.IWindowlessControl"/>-based view for use with WinForms APIs. Such view must be separately implemented for an automation object.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.SrcView.Automation.IAutomationViewsRegistryEx.CreateWindowlessControlView(JetBrains.Application.UI.Automation.IAutomationViewsRegistry,JetBrains.Lifetimes.Lifetime,JetBrains.Application.UI.UIAutomation.IAutomation,JetBrains.Application.Components.IComponentContainer)">
+            <summary>
+            Normally, an automation object gets an Avalon view with a <see cref="!:ContentPresenter"/> automatically.
+            This allows to create an alternative <see cref="T:JetBrains.Application.UI.Controls.IWindowlessControl"/>-based view for use with WinForms APIs. Such view must be separately implemented for an automation object.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.SrcView.Controls.JetPopupMenu.Impl.JetPopupMenuViewHierarchy">
+            <summary>
+            Manages nested popup menus.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.SrcView.Controls.JetPopupMenu.Impl.JetPopupMenuViewHierarchy.#ctor(JetBrains.Lifetimes.LifetimeDefinition,JetBrains.UI.SrcView.Controls.JetPopupMenu.Impl.IJetPopupMenuView)">
+            <summary>
+            Creates the hierarchy.
+            </summary>
+            <param name="lifetimeDefinition">Lifetime of the hierarchy, and of the root menu of the hierarchy (<paramref name="menuviewRoot"/>). Terminated automatically when the root menu exits the hierarchy.</param>
+            <param name="menuviewRoot">The root menu in the hierarchy.</param>
+        </member>
+        <member name="M:JetBrains.UI.SrcView.Controls.JetPopupMenu.Impl.JetPopupMenuViewHierarchy.CloseAll">
+            <summary>
+            Close all of the menus in the hierarchy, i.e. when a menu item gets executed.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.SrcView.Controls.JetPopupMenu.JetPopupMenusInteractive">
+            <summary>
+              <para>Factory for popup menus to inject all of the required components into the popup menu.</para>
+              <para>Designed to be usable even without a running shell.</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.SrcView.Controls.JetPopupMenu.JetPopupMenusInteractive.OnViewCreated">
+            <summary>
+            Provides an extensibility point for modifying newly created JetPopupMenuView
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.SrcView.Controls.JetPopupMenu.JetPopupMenusInteractive.GetOrFallbackPopupWindowContext(JetBrains.Application.UI.Controls.JetPopupMenu.JetPopupMenu,JetBrains.Application.Interop.NativeHook.IWindowsHookManager,JetBrains.Application.UI.UIAutomation.ControlWrapper,JetBrains.UI.SrcView.Controls.JetPopupMenu.IJetPopupMenuFactory,JetBrains.Application.UI.Components.IUIApplicationSimple)">
+            <summary>
+            Gets the layouter supplied by the user, or creates the default one if missing (for the center of the screen, or the main window).
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetTextWrapping.WrapWithOverflow">
+            <summary> Line-breaking occurs if the line overflows beyond the available block width. However, a line may overflow beyond the block width if the line breaking algorithm cannot determine a line break opportunity, as in the case of a very long word constrained in a fixed-width container with no scrolling allowed. </summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetTextWrapping.NoWrap">
+            <summary> No line wrapping is performed.</summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetTextWrapping.Wrap">
+            <summary> Line-breaking occurs if the line overflows beyond the available block width, even if the standard line breaking algorithm cannot determine any line break opportunity, as in the case of a very long word constrained in a fixed-width container with no scrolling allowed. </summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetVisibility.Visible">
+            <summary>Display the element.</summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetVisibility.Hidden">
+            <summary>Do not display the element, but reserve space for the element in layout.</summary>
+        </member>
+        <member name="F:JetBrains.UI.Common.JetVisibility.Collapsed">
+            <summary>Do not display the element, and do not reserve space for it in layout.</summary>
+        </member>
+        <member name="M:JetBrains.UI.Components.FontsManagerInteractive.GetDialogFont">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.UI.Components.FontsManagerInteractive.GetMenuFont">
+            <inheritdoc />
+        </member>
+        <member name="M:JetBrains.UI.Components.FontsManagerInteractive.GetTipFont">
+            <inheritdoc />
+        </member>
+        <member name="T:JetBrains.UI.Components.Unix.Linux.LinuxCommonLocateFile">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Unix.Linux.LinuxCommonLocateFile.LocateActionName">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Unix.Linux.LinuxCommonLocateFile.LocateFile(JetBrains.Util.FileSystemPath)">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="T:JetBrains.UI.Components.Unix.Mac.MacCommonLocateFile">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Unix.Mac.MacCommonLocateFile.LocateActionName">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Unix.Mac.MacCommonLocateFile.LocateFile(JetBrains.Util.FileSystemPath)">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="T:JetBrains.UI.Components.Windows.WindowsCommonLocateFile">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Windows.WindowsCommonLocateFile.LocateActionName">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="M:JetBrains.UI.Components.Windows.WindowsCommonLocateFile.LocateFile(JetBrains.Util.FileSystemPath)">
+            <inheritdoc cref="T:JetBrains.Application.UI.Controls.FileSystem.ICommonLocateFile"/>
+        </member>
+        <member name="T:JetBrains.UI.Controls.Automation.AutomationProviders">
+            <summary>
+            See <see cref="M:JetBrains.UI.Controls.Automation.AutomationProviders.Initialize"/>.
+            Also, if we're running in the mode that includes this assembly, winds up the automation providers automatically.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Controls.Automation.AutomationProviders.Initialize">
+            <summary>
+            Call this method to enable all of the automation peers.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.Controls.GotoByName.GotoByNameMenuBase">
+            <summary>
+            Implements the presentation of the Goto By Name functionality that works thru a <see cref="T:JetBrains.Application.UI.Controls.JetPopupMenu.JetPopupMenu"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Controls.GotoByName.GotoByNameMenuBase.MenuView">
+            <summary>
+            Gets the menu view, when the menu is running onscreen.
+            Otherwise <c>Null</c>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Controls.GotoByName.GotoByNameMenuBase.PopupWindow">
+            <summary>
+            Gets the menu popup window, when the menu is running onscreen.
+            Otherwise <c>Null</c>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Controls.GotoByName.GotoByNameMenuBase.#ctor(JetBrains.UI.Controls.GotoByName.GotoByNameMenuComponent,JetBrains.Lifetimes.LifetimeDefinition,JetBrains.Application.UI.Controls.GotoByName.GotoByNameModel,JetBrains.Application.UI.UIAutomation.ControlWrapper,JetBrains.Application.UI.Controls.GotoByName.GotoByNameDataConstants.SearchTextData,JetBrains.Application.UI.PopupLayout.PopupWindowContextSource)">
+            <summary>
+            Spawns the Goto By Name <see cref="T:JetBrains.Application.UI.Controls.JetPopupMenu.JetPopupMenu"/>-based UI upon the given model.
+            Disposes of the model when done.
+            </summary>
+            <param name="gotoByNameMenuComponent"></param>
+            <param name="lifetimeDefinition"></param>
+            <param name="model">Goto-by-name model that provides data for the UI.</param>
+            <param name="ownerwin"></param>
+            <param name="initialSearchTextData"></param>
+            <param name="customPopupWindowContext"></param>
+        </member>
+        <member name="T:JetBrains.UI.Controls.GotoByName.JetPopupMenuActionsShortcutsBehaviourBase">
+            <summary>
+            Attaches to existing <see cref="T:JetBrains.UI.SrcView.Controls.JetPopupMenu.Impl.IJetPopupMenuView"/> to provide ability to react to actions with shortcuts, evaluate and execute in DataContext with current Key
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Controls.GotoByName.JetPopupMenuActionsShortcutsBehaviourBase.ourSpecialActions">
+            <summary>
+            Special action handlers, which can work fine when active JPM exists on screen.
+            They are used for revolver-style Go to everything menu and floating QuickDoc
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.Controls.TrimmingUpdateTrigger">
+            <summary>
+            Defines when IsTrimmed property is calculated
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Controls.TrimmingUpdateTrigger.MouseEnter">
+            <summary>
+            Default behavior
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Controls.TrimmingUpdateTrigger.Layout">
+            <summary>
+            Immediate recalculation as anything changes
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.ExceptionReport.ShellLessExceptionReporting">
+            <summary>
+            Helpers for setting up exception reporting when the product shell is not running yet.
+            User-interactive mode helpers.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.ExceptionReport.ShellLessExceptionReporting.CreateAndInstallWithoutContext">
+            <summary>
+            An exception reporter which does not have the product context or any components yet.
+            Shows a primitive message box without the submit-to-tracker capability.
+            Reports failures in creation of the context for the full reporter.
+            We MUST NOT obey <see cref="P:JetBrains.Application.ExceptionReport.IsModeReportExceptionsComponent.IsShowingExceptionsToUser" /> flag here: after we have the context, we push another exception reporter that obeys the flag, but startup-related errors are most likely FATAL and MUST be shown to the user. — NOTE: not necessarily deemed true in wave01
+            </summary>
+        </member>
+        <member name="P:JetBrains.UI.License2.JBAccount.ObtainTrialLicenseViewModel.IsEnabled">
+            <summary>
+            Whether the model should be show to the user at all
+            </summary>
+        </member>
+        <member name="P:JetBrains.UI.License2.JBAccount.ObtainTrialLicenseViewModel.IsLoggedIn">
+            <summary>
+            Whether the user is logged in
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.PopupLayout.PopupFormControllerBase">
+            <summary>
+            The layout controller for the popup forms.
+            Shows a popup window, controls its location and position against the layouter, and destroys the form upon one of the predefined actions.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myContentForm">
+            <summary>
+            The form being controlled.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myContext">
+            <summary>
+            <see cref="P:JetBrains.UI.PopupLayout.PopupFormControllerBase.Context"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myEventsAttached">
+            <summary>
+            Specifies whether <see cref="M:JetBrains.UI.PopupLayout.PopupFormControllerBase.AttachEvents(JetBrains.UI.PopupLayout.PopupWindowManager)"/> has been performed for the instance.
+            Needed for <see cref="F:JetBrains.Application.UI.PopupLayout.FormHideMethod.Visibility"/>-type windows that may call <see cref="M:JetBrains.UI.PopupLayout.PopupFormControllerBase.ShowWindow"/> more than once, to prevent multiple <see cref="M:JetBrains.UI.PopupLayout.PopupFormControllerBase.AttachEvents(JetBrains.UI.PopupLayout.PopupWindowManager)"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myHideFlags">
+            <summary>
+            Defines the actions on which to hide. Can't be changed in runtime.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myHideMethod">
+            <summary>
+            <see cref="P:JetBrains.UI.PopupLayout.PopupFormControllerBase.HideMethod"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myIsChangingSize">
+            <summary>
+            Prevents from reacting to the child form resizes that are caused by ours applying the layout.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myIsDisposed">
+            <summary>
+            <see cref="P:JetBrains.UI.PopupLayout.PopupFormControllerBase.IsDisposed"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myLayoutMode">
+            <summary>
+            <see cref="P:JetBrains.UI.PopupLayout.PopupFormControllerBase.LayoutMode"/>.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myMutex">
+            <summary>
+            By default, each window is independent.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myReshowOnActivation">
+            <summary>
+            Whether a window should be shown automatically when the application is activated. Set to <c>True</c> only for those windows that have <see cref="F:JetBrains.Application.UI.PopupLayout.FormHideMethod.Visibility"/> and if they were hidden due to app deactivation.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myWantsFocus">
+            <summary>
+            Whether to grab focus on show.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupFormControllerBase.myDeactivationTimerLifetime">
+            <summary>
+            The timer to check whether the form should be closed.
+            </summary>
+            <remarks>
+            (DK) RSRP-458913 XAML designer and "Navigate to" popup
+            XAML designer is a separate process (XDesProc.exe) which windows are hosted by VS. It takes some time for VS to transfer focus to the designer's external window.
+            At the moment when the content form is deactivated the focus hasn't been changed yet.
+            If we have no IWindowsHookManager, we'll use this timer to check whether the form should be closed.
+            </remarks>
+        </member>
+        <member name="M:JetBrains.UI.PopupLayout.PopupFormControllerBase.#ctor(JetBrains.Lifetimes.LifetimeDefinition,JetBrains.Application.UI.UIAutomation.ControlWrapper,JetBrains.Application.UI.PopupLayout.IPopupWindowContext,JetBrains.Application.UI.WindowManagement.HideFlags,System.Boolean,JetBrains.Application.UI.PopupLayout.PopupWindowMutex,JetBrains.Application.UI.Components.IIsApplicationActiveState,JetBrains.UI.PopupLayout.PopupWindowManager)">
+            <summary>
+            Constructs a popup form controller.
+            </summary>
+            <param name="lifetimeDefinition">Defines the lifetime of the popup window. Could be terminated by this class in case the window is closed due to one of the conditions. Bind all of the layouters, window context, and per-popup-window additional resources to this lifetime.</param>
+            <param name="form">A form to be shown as a popup window.</param>
+            <param name="context">The owning context for the popup window, which defines when the window should be hidden, and also its layout and size through the layouter.</param>
+            <param name="hideflags">Flags that identify when to destroy the form.</param>
+            <param name="wantsfocus">If <c>True</c>, sets the focus to the popup window.</param>
+            <param name="mutex">Specifies the popup window's identity group.</param>
+            <param name="isApplicationActiveState"></param>
+            <param name="hookManager">Hooks to enable listening to focus loss in owned windows. If omitted, keeping the form alive while focus is in an owned window is not supported.</param>
+            <param name="popupWindowManager"></param>
+        </member>
+        <member name="P:JetBrains.UI.PopupLayout.PopupFormControllerBase.CanShowPopups">
+            <summary>
+            Gets whether the popup windows could be shown at the moment, ie whether the main window is currently active.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.PopupLayout.PopupFormControllerBase.AttachEvents(JetBrains.UI.PopupLayout.PopupWindowManager)">
+            <summary>
+            Hooks on all the listeners.
+            Must be called before showing the window onscreen.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.PopupLayout.PopupFormControllerBase.DetachEvents">
+            <summary>
+            Detaches from all the events.
+            You'd better not call it manually, but rather call <see cref="M:JetBrains.UI.PopupLayout.PopupFormControllerBase.Dispose"/> instead.
+            Resets many things to <c>Null</c>.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.PopupLayout.PopupFormControllerBase.OnActiveChanged">
+            <summary>
+            Kills the popup when switching away from Devenv.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.PopupLayout.PopupFormControllerBase.HideWindowIfNotFocused">
+            <summary>
+            Checks whether the controlled form owns the focus at the moment, and hides it if not.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.PopupLayout.PopupFormControllerBase.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:JetBrains.UI.PopupLayout.PopupFormControllerBase.HideMethod">
+            <summary>
+            Gets or sets what exactly the popup window should do to hide the controlled form.
+            </summary>
+        </member>
+        <member name="P:JetBrains.UI.PopupLayout.PopupFormControllerBase.IsDisposed">
+            <summary>
+            Gets whether the window has already been disposed.
+            </summary>
+        </member>
+        <member name="P:JetBrains.UI.PopupLayout.PopupFormControllerBase.LayoutMode">
+            <summary>
+            Gets or sets whether the popup window location and size is currently controlled by the layouter.
+            </summary>
+        </member>
+        <member name="P:JetBrains.UI.PopupLayout.PopupFormControllerBase.Mutex">
+            <summary>
+            Gets the mutex that defines the popup window's identity class.
+            For example, it may prohibit displaying more than one window of the same class at a time.
+            This value should be immutable.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.PopupLayout.PopupWindowManager">
+            <summary>
+            Manages the display, positioning, and destroying popup windows.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.PopupLayout.PopupWindowManager.myPopupWindows">
+            <summary>
+            This must be an instance member.
+            </summary>
+        </member>
+        <member name="P:JetBrains.UI.PopupLayout.PopupWindowManager.PopupWindows">
+            <summary>
+            Gets the collection of popup windows currently active in the system.
+            Some of them may be invisible.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.PopupLayout.PopupWindowManager.CreatePopupWindow(JetBrains.Lifetimes.LifetimeDefinition,System.Object,JetBrains.Application.UI.PopupLayout.IPopupWindowContext,JetBrains.Application.UI.WindowManagement.HideFlags,System.Boolean,JetBrains.Application.UI.PopupLayout.PopupWindowMutex)">
+            <summary>
+            Shows a popup window, controls its location and position against the layouter, and destroys the form upon one of the predefined actions.
+            </summary>
+            <param name="lifetimeDefinition">Defines the lifetime of the popup window. Could be terminated by this class in case the window is closed due to one of the conditions. Bind all of the layouters, window context, and per-popup-window additional resources to this lifetime.</param>
+            <param name="form">A form to be shown as a popup window.</param>
+            <param name="context">The owning context for the popup window.</param>
+            <param name="hideflags">Flags that identify when to destroy the form (or hide, if the <see cref="!:PopupFormController.HideMethod" /> has been overridden to <see cref="F:JetBrains.Application.UI.PopupLayout.FormHideMethod.Visibility" />).</param>
+            <param name="wantsfocus">If <c>True</c>, sets the focus to the popup window when it's first shown. The default is <c>True</c>.</param>
+            <param name="mutex">Specifies the popup window's identity group. Creates a new unique group if omitted.</param>
+            <returns>Identifies the popup window controller.</returns>
+        </member>
+        <member name="M:JetBrains.UI.PopupLayout.PopupWindowManager.CreatePopupWindow(JetBrains.Lifetimes.LifetimeDefinition,System.Object,JetBrains.Application.UI.PopupLayout.PopupWindowContextSource,JetBrains.Application.UI.WindowManagement.HideFlags,System.Boolean,JetBrains.Application.UI.PopupLayout.PopupWindowMutex)">
+            <inheritdoc cref="!:CreatePopupWindow(JetBrains.Lifetimes.LifetimeDefinition,System.Windows.Forms.Form,JetBrains.Application.UI.PopupLayout.IPopupWindowContext,JetBrains.Application.UI.WindowManagement.HideFlags,bool,JetBrains.Application.UI.PopupLayout.PopupWindowMutex)" />
+        </member>
+        <member name="M:JetBrains.UI.PopupLayout.PopupWindowManagerEx.ShowPopupWindow(JetBrains.UI.PopupLayout.PopupWindowManager,JetBrains.Lifetimes.Lifetime,JetBrains.Application.UI.Controls.IConstrainableControl,System.Func{JetBrains.Lifetimes.Lifetime,JetBrains.Application.UI.PopupLayout.IPopupWindowContext},JetBrains.Application.UI.WindowManagement.HideFlags,JetBrains.Application.UI.PopupLayout.FormHideMethod)">
+            <summary>
+            Shows a popup window, controls its location and position against the layouter, and destroys the form upon one of the predefined actions.
+            </summary>
+            <param name="thіs"></param>
+            <param name="lifetime">The limiting lifetime for the window session.</param>
+            <param name="form">A form to be shown as a popup window.</param>
+            <param name="FCreateContext">The owning context for the popup window.</param>
+            <param name="hideflags">Flags that identify when to destroy the form.</param>
+            <param name="hidemethod">What to do to the window if it should be hidden (e.g. when app is deactivated). By default, the popup window will be closed, and its resources freed.</param>
+            <returns>Identifies the popup window controller.</returns>
+        </member>
+        <member name="M:JetBrains.UI.PopupLayout.PopupWindowManagerEx.ShowPopupWindow(JetBrains.UI.PopupLayout.PopupWindowManager,JetBrains.Lifetimes.Lifetime,JetBrains.Application.UI.Controls.IConstrainableControl,JetBrains.Application.UI.PopupLayout.PopupWindowContextSource,JetBrains.Application.UI.WindowManagement.HideFlags,JetBrains.Application.UI.PopupLayout.FormHideMethod)">
+            <summary>
+            Shows a popup window, controls its location and position against the layouter, and destroys the form upon one of the predefined actions.
+            </summary>
+            <param name="thіs"></param>
+            <param name="lifetime">The limiting lifetime for the window session.</param>
+            <param name="form">A form to be shown as a popup window.</param>
+            <param name="contextsource">The owning context for the popup window.</param>
+            <param name="hideflags">Flags that identify when to destroy the form.</param>
+            <param name="hidemethod">What to do to the window if it should be hidden (e.g. when app is deactivated). By default, the popup window will be closed, and its resources freed.</param>
+            <returns>Identifies the popup window controller.</returns>
+        </member>
+        <member name="T:JetBrains.UI.Settings.OwnedDialogPosition">
+            <summary>
+            Stores position (location + size) of owned dialogs relatively to the center of their owning window.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Settings.OwnedDialogPosition.CenterLocation">
+            <summary>
+            The distance of the child window center from the main/parent window center, in Avalon units.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Settings.OwnedDialogPosition.Size">
+            <summary>
+            The size of the child window, in Avalon units.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.Settings.PointRelativeToMainWindow">
+            <summary>
+            A screen point relative to the application main window. Wraps the <see cref="T:System.Windows.Point" /> type, but with some additional semantic.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Settings.PointRelativeToMainWindow.Value">
+            <summary>
+            The distance of the child window center from the main/parent window center, in Avalon units.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.Updates.DefaultSupportUpdates">
+            <summary>
+            By default any UI application supports automatic updates, but does not show Updates option page.
+            </summary>
+        </member>
+        <member name="T:JetBrains.UI.Utils.DpiUtil">
+            <summary>
+            The DPI Utility class which knows about the dynamic DPI.
+            UI-interactive-aware, but not framework-specific.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi">
+            <summary>
+              <para>The resolution in which the system has booted (or logged in the current session). On newer Windows, this might be fixed per application start time rather than logon time.</para>
+              <para>If not <seealso cref="F:JetBrains.UI.Utils.DpiUtil.IsDynamicDpi" />, then all of the DPI values in the system will be equal to this.</para>
+              <para>Since DPI is per-window, you should use <c>DpiResolutions::From…()</c> whenever possible. DPI can change in time, so use the live versions and apply changes.</para>
+              <para>If you do not know the window/control you'd be used in, or you are currently not attached to any visual, use <see cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" /> as the safest fallback.</para>
+            </summary>
+            <seealso cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" />
+            <seealso cref="F:JetBrains.UI.Utils.DpiUtil.PrimaryMonitorDpi" />
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.DpiMightHaveChanged">
+            <summary>
+            Fires when any of the system DPI-related settings might have changed.
+            For a window, this does not cover all cases because the window could have been moved to another display.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi">
+            <summary>
+            Gives _some_ DPI value which you should use when you cannot get the real DPI of the location.
+            This might happen if your control has not been placed yet, or you are rendering without connection to the real UI, or if you are waiting to get the real DPI. The point is that you must use _some_ value anyway, and better it match the intended DPI otherwise there will be a mismatch or a resize animation.
+            This should give the DPI of the application main window, if known, otherwise the primary display DPI.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.HighestResolutionScreenDpi">
+            <summary>
+            Of all the current screen DPIs, the highest one.
+            <para>If you do not know the window/control you'd be used in, or you are currently not attached to any visual, use <see cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" /> as the safest fallback.</para>
+            <para>If not <seealso cref="F:JetBrains.UI.Utils.DpiUtil.IsDynamicDpi" />, then same as <seealso cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" />.</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.IsDynamicDpi">
+            <summary>
+            Gets whether the current environment supports dynamic DPI (as opposed to having it statically defined at boot / logon time).
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.LowestResolutionScreenDpi">
+            <summary>
+            Of all the current screen DPIs, the lowest one.
+            <para>If you do not know the window/control you'd be used in, or you are currently not attached to any visual, use <see cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" /> as the safest fallback.</para>
+            <para>If not <seealso cref="F:JetBrains.UI.Utils.DpiUtil.IsDynamicDpi" />, then same as <seealso cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" />.</para>
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.PrimaryMonitorDpi">
+            <summary>
+              <para>Current DPI of the primary monitor.</para>
+              <para>If not <seealso cref="F:JetBrains.UI.Utils.DpiUtil.IsDynamicDpi" />, then same as <seealso cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" />.</para>
+              <para>Since DPI is per-window, you should use <c>DpiResolutions::From…()</c> whenever possible. DPI can change in time, so use the live versions and apply changes.</para>
+              <para>If you do not know the window/control you'd be used in, or you are currently not attached to any visual, use <see cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" /> as the safest fallback.</para>
+            </summary>
+            <seealso cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" />
+            <seealso cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" />
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.EnableNonClientDpiScaling(System.Void*)">
+            <summary>
+            Should be called on OSes which support per-monitor DPI v1 not v2 (that's 8.1 and up to 10.0.14393).
+            </summary>
+            <param name="hwnd"></param>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetMonitorCurrentDpi(System.Void*)">
+            <summary>
+            Gets the current DPI resolution of the given monitor. Favors the per-monitor dynamic DPI, if applicable.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetPrimaryMonitorCurrentDpi">
+            <summary>
+            Gets the current DPI resolution of the primary monitor. Favors the per-monitor dynamic DPI, if applicable.
+            This MUST NOT be used as the primary source for resolutions, but MIGHT be used as a sane fallback when the correct DPI retrieval has failed.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetSystemDpiForOurProcess">
+            <summary>
+            Originally, that were the boot time system DPI (hence <see cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" />).
+            Later on, Windows 10 April 2018 Update added a feature that it snapshots the primary display DPI at the moment a process is started as its per-process system DPI. And added the <see cref="M:JetBrains.Interop.WinApi.User32Dll.GetSystemDpiForProcess(System.Void*)" /> API. Theoretically, it's still static in the process lifetime, and <see cref="F:JetBrains.UI.Utils.DpiUtil.BootTimeStaticDpi" /> should do. But hell knows their ideas. So let's call the function for sure (if OS is new enough).
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetSystemMetricInLogicalPixels(JetBrains.Interop.WinApi.SystemMetricsCodes)">
+            <summary>
+            Returns a system metric (which must be in pixels) in logical pixels (i.e. at 96 DPI).
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetWindowScreenDpiCurrent(System.Void*)">
+            <summary>
+            Gets the screen DPI for a window at this moment, from the monitor on which it's currently shown.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.SetProcessAsDpiAware">
+            <summary>
+            Sets the current process as fully aware of per-monitor DPI.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.CollectCurrentMonitorDpis">
+            <summary>
+            Gets the min/max resolution of the displays currently available.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.DpiUtil.GetBootTimeScreenDpi">
+            <summary>
+            Gets the system-wide boot-time (or logon-time) screen DPI which does not reflect dynamic and per-monitor DPI changes.
+            </summary>
+        </member>
+        <member name="F:JetBrains.UI.Utils.DpiUtil.ImplementationDetails.FallbackDpiProviders">
+            <summary>
+            When main window is known, submit its DPI provider here.
+            The last item in the list wins over <see cref="F:JetBrains.UI.Utils.DpiUtil.FallbackDpi" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.UI.Utils.TextBlockWithHyperlinksUtils.ParseStringWithABandLinks(System.String)">
+            <summary>
+            Creates hyperlinks from HTML-formatted links. Call <see cref="M:JetBrains.UI.Utils.TextBlockWithHyperlinksUtils.ParseStringWithBandLinks(System.String)"/> for plain text pieces
+            </summary>
+            <param name="text">Input text</param>
+            <returns>List of inline for <see cref="!:TextBlockWithHyperlinks"/></returns>
+        </member>
+        <member name="M:JetBrains.UI.Utils.TextBlockWithHyperlinksUtils.ParseStringWithBandLinks(System.String)">
+            <summary>
+            Creates bold inlines from text pieces in b tags. Calls <see cref="M:JetBrains.UI.Utils.TextBlockWithHyperlinksUtils.ParseStringWithLinks(System.String)"/> for plain text pieces
+            </summary>
+            <param name="text">Input text</param>
+            <returns>List of inline for <see cref="!:TextBlockWithHyperlinks"/></returns>
+        </member>
+        <member name="M:JetBrains.UI.Utils.TextBlockWithHyperlinksUtils.ParseStringWithLinks(System.String)">
+            <summary>
+            Creates hyperlinks from text pieces starting with http and inlines for plain text pieces
+            </summary>
+            <param name="value">Input text</param>
+            <returns>List of inline for <see cref="!:TextBlockWithHyperlinks"/></returns>
+        </member>
+    </members>
+</doc>

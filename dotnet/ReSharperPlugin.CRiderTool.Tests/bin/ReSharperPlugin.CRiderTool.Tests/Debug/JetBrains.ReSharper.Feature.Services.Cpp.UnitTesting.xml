@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.ReSharper.Feature.Services.Cpp.UnitTesting</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.ReSharper.Feature.Services.Cpp.UnitTesting.ICppUnitTestingZone">
+            <summary>
+              Additionally adds the functionality to run the test processes.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Feature.Services.Cpp.ICppUnitTestingExplorationZone">
+            <summary>
+              Language-related features, e.g. detect test frameworks and collect unit test elements from code.
+            </summary>
+        </member>
+    </members>
+</doc>
